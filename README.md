@@ -35,7 +35,7 @@ A simplified version of the two square cipher called the "square cipher."
 ## Implementation
 Your web application should allow users to input text, select a shift value for Caesar cipher, and update the square for the Square cipher. The output should display the encrypted text in the top and bottom text fields.
 
-# Assignment 5: Web Server for Translation
+# Assignment 5 & 6: Web Server for Translation
 
 ## Objective
 Develop a web server capable of translating text between English, Spanish, and German. Write all code in a single file named `translator.js`. Your server will act as a "Web-based API" for text translation, allowing users to request different translations by modifying the URL.
