@@ -1,4 +1,10 @@
 # WebProgrammingAssignments
+
+This repository contains solutions and projects related to web programming assignments. The assignments cover various web development topics and technologies, including HTML, CSS, JavaScript, DOM manipulation, event-driven programming, web servers, and more.
+
+## Professor
+These assignments are provided by [Professor Benjamin Dicken](https://benjdd.com). Credit goes to Professor Dicken for creating and assigning these projects to help students learn web development concepts.
+
 # Assignment 4: - Cipher Algorithms
 
 ## Objective
