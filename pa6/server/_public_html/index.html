@@ -1,0 +1,42 @@
+<!--
+Alejandro Zepeda
+PA #6 CSC 337
+The purpose of this file is to provide strucutre to the Translator app.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>TRANSLATOR</h1>
+    </div>
+    <div class="main-content">
+        <div class="text-inputs-div">
+            <div class="custom-select">
+                <select name="fromLanguageOption" id="fromLanguageOption">
+                    <option value="english">English</option>
+                    <option value="german">German</option>
+                    <option value="spanish">Spanish</option>
+                </select>
+            </div>
+            <textarea class='input' id="fromLanguageText"></textarea>
+        </div>
+        <div class="text-inputs-div">
+            <div class="custom-select">
+                <select name="toLanguageOption" id="toLanguageOption">
+                    <option value="english">English</option>
+                    <option value="german">German</option>
+                    <option value="spanish">Spanish</option>
+                </select>
+            </div>
+            <textarea class='input' id="toLanguageText"></textarea>
+        </div>
+    </div>
+</body>
+<script src="./translateUI.js"></script>
+</html>

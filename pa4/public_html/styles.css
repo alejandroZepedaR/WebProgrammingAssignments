@@ -1,0 +1,82 @@
+/* 
+Alejandro Zepeda
+PA #4 CSC 337
+The purpose of this file is to give style to the html file.
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    height: 100%;
+}
+button{
+    background-color: #30BCED;
+    width: 200px;
+    height: 50px;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+h1{
+    font-size: 50px;
+    margin-bottom: 10%;
+}
+h2{
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+input{
+    margin-bottom: 10%;
+    width: 50%;
+}
+.aside{
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding: 10px;
+    display: flex;
+    background-color: #303036;
+    color: #FFFAFF;
+    flex-direction: column;
+}
+.cipher-section{
+    width: 70%;
+    height: 100%;
+    color: #050401;
+}
+.cipher-div{
+    padding-top: 10%;
+    text-align: center;
+    height: 50%;
+}
+.square-letter{
+    width: 20%;
+    padding: 10px;
+    border: #FC5130 solid 2px;
+}
+.column{
+    display: flex;
+}
+#squareCipherTable{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    border: #FC5130 solid 3px;
+    font-size: 30px;
+
+}
+#caesarCipherDiv{
+    background-color: #30BCED;
+}
+#squareCipherDiv{
+    background-color: #FC5130;
+}

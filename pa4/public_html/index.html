@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+    Alejandro Zepeda
+    CSC 337 PA #4
+    The purpose of this file is to provide the HTML structure for the 
+    Cipher generator
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Wlecome to the Jumble</title>
+</head>
+<body>
+    <div class="aside">
+        <h1>Welcome to the Jumble</h1>
+        <input type="text" id="plainText" name="plainText" placeholder="welcome to the jumble">
+        <p id="shiftValue"></p>
+        <input type="range" id="slider" name="shift" min="0" max="26" value="0">
+        <button onclick="changeSquareLetters()">Update Square</button>
+        <div id="squareCipherTable">
+            <div class="column">
+                <div class="square-letter">A</div>
+                <div class="square-letter">B</div>
+                <div class="square-letter">C</div>
+                <div class="square-letter">D</div>
+                <div class="square-letter">E</div>
+            </div>
+            <div class="column">
+                <div class="square-letter">F</div>
+                <div class="square-letter">G</div>
+                <div class="square-letter">H</div>
+                <div class="square-letter">I</div>
+                <div class="square-letter">J</div>
+            </div>
+            <div class="column">
+                <div class="square-letter">K</div>
+                <div class="square-letter">L</div>
+                <div class="square-letter">M</div>
+                <div class="square-letter">N</div>
+                <div class="square-letter">O</div>
+            </div>
+            <div class="column">
+                <div class="square-letter">P</div>
+                <div class="square-letter">Q</div>
+                <div class="square-letter">R</div>
+                <div class="square-letter">S</div>
+                <div class="square-letter">T</div>
+            </div>
+            <div class="column">
+                <div class="square-letter">U</div>
+                <div class="square-letter">V</div>
+                <div class="square-letter">W</div>
+                <div class="square-letter">X</div>
+                <div class="square-letter">Y</div>
+            </div>
+        </div>
+    </div>
+    <div class="cipher-section">
+        <div class="cipher-div" id="caesarCipherDiv">
+            <h2 id="caesarCipherText">Welcome to the Jumble</h2>
+        </div>
+        <div class="cipher-div" id="squareCipherDiv">
+            <h2 id="squareCipherText">Welcome to the Jumble</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

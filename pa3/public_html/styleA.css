@@ -1,0 +1,127 @@
+/* 
+Alejandro Zepeda
+CIS 337 PA #3
+
+The size of the header, navigation bar, and main page content, all are in fixed position and scale with the screen resizing.
+The elements consume all of the available screen real-estate.
+Rather than the whole page scrolling, only the main page content view scrolls. The navigation bar and header should not scroll.
+The text in the content “wraps” to the size of the containing element.
+The PriceCo logo is aligned to the top-left of the page, and the company name / tagline is right-aligned.
+*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 30px;
+    font-size: 70px;
+    margin-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#header{
+    color: #162521;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 20px;
+    background-color: #4F7CAC;
+    z-index: 100;
+}
+
+
+#navigation{
+    height: 100%;
+    position: fixed;
+    width: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #4F7CAC;
+}
+
+#navigation a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+#navigation a:hover{
+    color: #9EEFE5;
+}
+#content{
+    margin-top: 100px;
+    padding-left: 30%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: #C0E0DE;
+}
+
+body a{
+    color: red;
+}
+
+.styleButton{
+    background-color: #3C3C3C;
+    opacity: 20%;
+    width: 5%;
+    height: 20px;
+    padding: 4px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    bottom: 0; 
+}
+
+.styleButton:hover{
+    opacity: 100%;
+}
+
+.productImg{
+    width: 40%;
+}
+
+.productGroup{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.productDesc{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#pricecoLogo{
+    width: 10%;
+}
+
+#styleA{
+    right: 0; 
+} 
+#styleB{ 
+    right: 10%;
+}
+#styleC{
+    right: 20%; 
+} 
+#header div:last-child{
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}

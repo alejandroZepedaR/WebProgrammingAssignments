@@ -1,0 +1,117 @@
+/* 
+Alejandro Zepeda
+CIS 337 PA #3
+
+The header and navigation zones have a fixed width and height (not relative to the window size).
+The header is in the top-left (using float)
+The navigation bar is in the top-right (also using float)
+The whole page should scroll, not just the product area.
+The product text should not be covered by the header and navigation zones. It should wrap nicely, as shown.
+
+*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.styleButton{
+    background-color: #3C3C3C;
+    opacity: 20%;
+    width: 5%;
+    height: 4%;
+    padding: 4px;
+    margin-bottom: 1%;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 0;
+}
+.styleButton:hover{
+    opacity: 100%;
+}
+#styleA{
+    top: 40%;
+    z-index: 2;
+} 
+#styleB{ 
+    top: 50%;
+    z-index: 2;
+}
+#styleC{
+    top: 60%;
+    z-index: 2;
+}
+
+#header{
+    background-color: #087E8B;
+    color: #F5F5F5;
+    width: 400px;
+    height: 400px;
+    float: left;
+    border: solid 4px #FF5A5F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#header div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#pricecoLogo{
+    width: 60%;
+}
+#navigation{
+    background-color: #087E8B;
+    width: 400px;
+    height: 400px;
+    float: right;
+    border: solid 4px #FF5A5F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#navigation a{
+    color: #F5F5F5;
+    text-decoration: none;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#navigation a:hover{
+    color: #FF5A5F;
+}
+
+#content{
+    background-color: #F5F5F5;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+    flex-wrap: wrap;
+}
+.productDesc{
+    padding: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.productImg{
+    border: solid #C1839F 5px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+
+
+
