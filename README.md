@@ -101,7 +101,49 @@ Develop a web server capable of translating text between English, Spanish, and G
     - English to Spanish: "orange drink" -> "la naranja el refresco"
     - Spanish to English: "conseguilbe atalaya" -> "attainable beacon"
     - Spanish to German: "negro azul" -> "schwarze blau"
-    - German to Spanish: "gelb" -> "amarillo"
+    - German to Spanish: "gelb" -> "Camarillo"
+
+# Assignment 7: Chatty - Chat Application
+
+## Objective
+Create a chat application called "Chatty" that combines various technologies including MongoDB, Mongoose, Express, AJAX, and more. Chatty should provide users with a basic chat interface where they can specify an alias (username) and send messages.
+
+## The Client
+The client is a single-page site, served statically by the Node.js server. It includes an HTML page (`index.html`), a CSS file for styling, and a JavaScript file for functionality. The top 70% of the page is dedicated to the chat window, where messages will appear. The bottom 30% features two text input fields (for user alias and message) and a "Send Message" button. You have the freedom to get creative with colors, fonts, and other stylistic elements.
+
+Client-side JavaScript should support two major functionalities:
+1. Sending messages to the server: When the user clicks the "Send Message" button, Chatty should collect the alias and message text, send this information to the server for storage, and clear the message text box for the next input.
+
+2. Fetching messages from the server: The client should use `setInterval` to periodically request the list of messages from the server, displaying them in the chat window. User-sent messages should only appear after the next server response (ping). Messages should display aliases in bold and messages in regular text.
+
+## The Server
+The server is built using Express and Node.js and incorporates MongoDB and the Mongoose module.
+
+1. Configure Express to handle static file serving for the `public_html` directory.
+
+2. Handle two types of requests:
+   - GET request to the path `/chats`: Retrieve all stored messages from the MongoDB database and return them to the client for display. The client should make a request to this path every 1 second to stay updated with recent chat messages.
+   - POST request to the path `/chats/post`: Sent from the client and includes an alias and message in the request body. The server should save the alias, message, and a timestamp in the database for later retrieval via a `/chats` GET request.
+
+## The Database
+To set up the database, you need to install MongoDB and ensure it's up and running. Follow the instructions based on your operating system if you haven't already. Use NPM to install Mongoose (in addition to Express) to connect to the database.
+
+For this simple chat app, you need one schema to hold chat messages. Consider the following schema structure, which you can modify if you want to add more features:
+
+```javascript
+var Schema = mongoose.Schema;
+var ChatMessageSchema = new Schema({
+  time: Number,
+  alias: String,
+  message: String
+});
+var ChatMessage = mongoose.model('ChatMessage', ChatMessageSchema);
+```
+This code should be executed after establishing a connection with MongoDB and before handling web requests.
+
+When a user requests the sequence of chat messages, query the database using Mongoose to get the list of all messages and ensure they are returned in the order they were sent.
+
+When a user submits a new message, add it to the database via Mongoose.
 
 
 
